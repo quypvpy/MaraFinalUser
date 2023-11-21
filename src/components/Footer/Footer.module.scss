@@ -1,0 +1,55 @@
+.wrapper {
+  margin: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+.menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  color: var(--color-primary);
+}
+.title {
+  color: #379237;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.signup .link {
+  color: var(--color-primary);
+}
+.link {
+  margin: 8px 0;
+}
+.button-signup {
+  background-color: #379237;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+@media screen and (max-width: 1279px) {
+  .wrapper {
+    text-align: center;
+
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .menu {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu > div {
+    margin-bottom: 50px;
+  }
+  .menu > div:nth-child(3) {
+    margin-bottom: unset;
+  }
+}
