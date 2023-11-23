@@ -88,7 +88,7 @@ export function Tag({cate}) {
   const handleClickMenuTag = async (id,index)=>{
     
     const  {data}  = await courseCate.get(id);
-    console.log('k  cos',data);
+
     if(!data) {
       console.log('k  cos');
     }
@@ -111,7 +111,7 @@ export function Tag({cate}) {
       
   // }
  
-  console.log('dât1');
+
   const  handleClick=(id)=>{
     setIdItemList(id)
   }

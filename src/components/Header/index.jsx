@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { ListSubMenu } from '../../features/Courses/components/ListSubMenu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import educationApi from '../../api/educationApi';
 import { useSelector } from 'react-redux';
@@ -67,6 +68,7 @@ React.useEffect(() => {
             </ListItemButton>
           </ListItem>
         ))}
+        
       </List>
     </Box>
   );
@@ -84,6 +86,10 @@ const handleMouseLeave=()=>{
 }
 const NavigatetoMenu=()=>{
   navigate('/')
+
+}
+const handleClickIcon=()=>{
+  navigate('/student')
 
 }
   return (
@@ -115,12 +121,18 @@ const NavigatetoMenu=()=>{
             MTech
           </Typography>
         
-          <Box sx={{display: { xs: 'none', sm: 'block' }}}>
+          <Box sx={{display: { xs: 'none', sm: 'flex',alignItems:'center' }}}>
             {navItems.map((item) => (
-              <Button onMouseEnter={()=>handleMouseEnter(item)} onMouseLeave={()=>handleMouseLeave(item)} key={item} sx={{ color: '#fff' ,zIndex: 111111,'&:hover': { color: 'red',cursor:'pointer' }}}>
-                {item}
-              </Button>
-            ))}
+              
+                <Button onMouseEnter={()=>handleMouseEnter(item)} onMouseLeave={()=>handleMouseLeave(item)} key={item} sx={{ color: '#fff' ,zIndex: 111111,'&:hover': { color: 'red',cursor:'pointer' }}}>
+                  {item}
+                </Button>
+        
+             
+              
+              ))}
+              
+              <AccountCircleIcon onClick={handleClickIcon} sx={{color:'white',fontSize:'30px',cursor:'pointer',ml:2,zIndex: 111111}}></AccountCircleIcon>
           </Box>
 
           {isShowSubMenu && (
